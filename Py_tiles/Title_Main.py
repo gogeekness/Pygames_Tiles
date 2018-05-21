@@ -26,7 +26,7 @@ def main():# define where data directory is located
     all = pygame.sprite.RenderUpdates()
     Tile.containers = tiles, all
 
-    for i in range(0, 5):
+    for i in range(0, 7):
         for tcolor in config.tilecolor:
             tileset.append(Tile((random.random() * 700 + 50, random.random() * 500 + 50), tcolor))
 
