@@ -11,6 +11,13 @@ from pygame.locals import *
 
 # ----------------------------------------------------------------------------------------------------
 
+''' Notes:
+ 3 across will be a normal but the the fill-side as the direction of the last shift
+ 4 across will be like a normal but the whole board shifts as with the direction of the last shift
+ 4 square will be spiral shift of 4 lines
+ 5 across will be like a normal but the whole board shifts as with the direction of the last shift'''
+
+
 
 def main():# define where data directory is located
     pygame.init()
@@ -27,8 +34,8 @@ def main():# define where data directory is located
     Tile.containers = tiles, all
 
     for i in range(0, 7):
-        for tcolor in config.tilecolor:
-            tileset.append(Tile((random.random() * 700 + 50, random.random() * 500 + 50), tcolor))
+        for j in range(0, 7):
+            tileset.append(Tile((50 + (j * 100), 50 + (i * 100)), config.tilecolor[random.randint(0,4)]))
 
     # keep track of time
     clock = pygame.time.Clock()

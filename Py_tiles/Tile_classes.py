@@ -20,15 +20,14 @@ class Tile(pygame.sprite.Sprite):
 
     # Construct the tiles
     def __init__(self, pos, tcolor):
-        speed = 10.0
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.image = load_image('Tiles_01_', (tcolor + '.png'))
         self.rect = self.image.get_rect()
         self.rect.x = pos[0]
         self.rect.y = pos[1]
         angle = (random.random() * 2 * math.pi)
-        self.speedx = (math.cos(angle) * speed)
-        self.speedy = (math.sin(angle) * speed)
+        self.speedx = (math.cos(angle) * config.speed)
+        self.speedy = (math.sin(angle) * config.speed)
 
 
     def update(self):
