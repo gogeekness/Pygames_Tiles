@@ -7,6 +7,7 @@ import random
 import sys
 import Tile_Config as config
 from Tile_classes import Tile
+from Board_Class import Gameboard
 from pygame.locals import *
 
 # ----------------------------------------------------------------------------------------------------
@@ -33,9 +34,12 @@ def main():# define where data directory is located
     all = pygame.sprite.RenderUpdates()
     Tile.containers = tiles, all
 
+    tileboard = Gameboard
+
+
     for i in range(0, 7):
         for j in range(0, 7):
-            tileset.append(Tile((50 + (j * 100), 50 + (i * 100)), config.tilecolor[random.randint(0,4)]))
+            tileset.append(Tile((50 + (j * 100), 50 + (i * 100)), config.tilecolor[random.randint(1, 4)]))
 
     # keep track of time
     clock = pygame.time.Clock()

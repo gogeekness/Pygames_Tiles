@@ -1,6 +1,14 @@
 # Tile class
+# This will setup the graphical displaying of the tiles
+#
+# It will pull the color and status from teh board class
+#
+# --------------------------------------------------------
+
 import os, pygame, random, math
 import Tile_Config as config
+# import Board_Class as board
+
 
 # define where data directory is located
 main_dir = os.path.split(os.path.abspath(__file__))[0]
@@ -9,12 +17,14 @@ data_dir = os.path.join(main_dir, "data_dir")
 
 def load_image(subfile, tcolor):
     try:
+        # this code loads the specific color for the tile.
         image = pygame.image.load(os.path.join(data_dir, (subfile + tcolor)))
     except pygame.error:
         raise SystemExit('Could not load tile image.', os.path.join(data_dir, (subfile + tcolor)))
     return image
 
 
+# constructor for class Tile
 class Tile(pygame.sprite.Sprite):
     image = None
 
@@ -25,9 +35,8 @@ class Tile(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = pos[0]
         self.rect.y = pos[1]
-        angle = (random.random() * 2 * math.pi)
-        self.speedx = (math.cos(angle) * config.speed)
-        self.speedy = (math.sin(angle) * config.speed)
+        self.speedx = config.speed
+        self.speedy = config.speed
 
 
     def update(self):
