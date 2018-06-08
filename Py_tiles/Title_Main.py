@@ -25,7 +25,7 @@ def main():# define where data directory is located
     tileset = []
 
     # make a background
-    backscreen = pygame.display.set_mode(config.size)
+    backscreen = pygame.display.set_mode(config.displaysize)
     backscreen.fill(config.black)
     backscreen.blit(backscreen, (0, 0))
 
@@ -34,12 +34,13 @@ def main():# define where data directory is located
     all = pygame.sprite.RenderUpdates()
     Tile.containers = tiles, all
 
-    tileboard = Gameboard
+    tileboard = Gameboard()
 
-
-    for i in range(0, 7):
-        for j in range(0, 7):
-            tileset.append(Tile((50 + (j * 100), 50 + (i * 100)), config.tilecolor[random.randint(1, 4)]))
+    buffervar = config.boardbuffer
+    for j in range(buffervar, config.boardsize[1] + buffervar):
+        for i in range(buffervar, config.boardsize[0] + buffervar):
+            print("Cords:", i, j, " color: -> ", tileboard[(i, j)]['color'])
+            tileset.append(Tile((50 + ((j - buffervar) * 100), 50 + ((i - buffervar) * 100)), tileboard[(i, j)]['color']))
 
     # keep track of time
     clock = pygame.time.Clock()

@@ -1,7 +1,7 @@
 # Tile Config, Globals
 
 # set size of the field
-size = width, height = 800, 800
+displaysize = width, height = 800, 800
 black = (  0,   0,   0)
 white = (255, 255, 255)
 dgrey = ( 50,  50,  50)
@@ -12,4 +12,6 @@ green = (  0,  255,  0)
 blue  = (  0,    0,255)
 tilecolor = ['blank', 'red', 'green', 'blue', 'yellow', 'cyan', 'purple', 'brown', 'grey']
 speed = 0
-gamesize = (7, 7)
+boardbuffer = 3
+boardsize = (7, 7)
+fullboardsize = (boardsize[0] + boardbuffer * 2, boardsize[1] + boardbuffer * 2)
