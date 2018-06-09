@@ -27,14 +27,30 @@ class Gameboard:
         x, y = tup
         self.array[x][y] = value
 
-
     # to set the gameboard so there are no winning tile groups on the gameboard at the start
     def find_start(self, status, x, y):
-        self.array[x][y]['color'] = config.tilecolor[random.randint(1, 4)]
-        print("Cords:", x, y, "Color", self.array[x][y]['color'])
+        # this maps the 3 right-across, and 3-above the center tile (0, 0)
+        checklist = [(0, -2), (0, -1), (-2, 0), (-1, 0), (-1, -1)]
+        checksum = 0
+        three = True
 
-        # config.gamesize[0]
-        # config.gamesize[1]
+        for i, j in checklist:
+            checksum += config.tilecolor.index(self.array[i+x][j+y]['color'])
+
+        # while the modula is == 0 then repeat
+        while three:
+            tiletestcolor = random.randint(1, 4)
+            # Now look at the tile being placed
+            checksum += tiletestcolor
+            if (checksum % 4) != 0:
+                # If the sum don't match then break out of the loop and
+                three = False
+            else:
+                # remove the last tile color
+                checksum -= tiletestcolor
+
+        self.array[x][y]['color'] = config.tilecolor[tiletestcolor]
+        print("Cords:", x, y, "Color", self.array[x][y]['color'])
 
 
 

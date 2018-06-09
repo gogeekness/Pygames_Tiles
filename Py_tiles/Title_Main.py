@@ -37,8 +37,8 @@ def main():# define where data directory is located
     tileboard = Gameboard()
 
     buffervar = config.boardbuffer
-    for j in range(buffervar, config.boardsize[1] + buffervar):
-        for i in range(buffervar, config.boardsize[0] + buffervar):
+    for i in range(buffervar, config.boardsize[1] + buffervar):
+        for j in range(buffervar, config.boardsize[0] + buffervar):
             print("Cords:", i, j, " color: -> ", tileboard[(i, j)]['color'])
             tileset.append(Tile((50 + ((j - buffervar) * 100), 50 + ((i - buffervar) * 100)), tileboard[(i, j)]['color']))
 
