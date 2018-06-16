@@ -39,7 +39,7 @@ def main():# define where data directory is located
     buffervar = config.boardbuffer
     for i in range(buffervar, config.boardsize[1] + buffervar):
         for j in range(buffervar, config.boardsize[0] + buffervar):
-            print("Cords:", i, j, " color: -> ", tileboard[(i, j)]['color'])
+            # print("Cords:", i, j, " color: -> ", tileboard[(i, j)]['color'])
             tileset.append(Tile((50 + ((j - buffervar) * 100), 50 + ((i - buffervar) * 100)), tileboard[(i, j)]['color']))
 
     # keep track of time
