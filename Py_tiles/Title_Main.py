@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-# Multi Bonce Ball
+# This is a tile puzzle game
+# The idea is to have rows & colnums shift as a move
+# When there is a 3-row, 4-row, 5-row, and 4 square then remove them from play
+# Play ends if there are no 3,4,5 rows or 4 squares
 
 import os
 import pygame
