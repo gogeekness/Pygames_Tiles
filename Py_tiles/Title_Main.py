@@ -4,14 +4,15 @@
 # When there is a 3-row, 4-row, 5-row, and 4 square then remove them from play
 # Play ends if there are no 3,4,5 rows or 4 squares
 
-import os
 import pygame
-import random
+from pygame.locals import *
 import sys
 import Tile_Config as config
-from Tile_classes import Tile
+from Gtiles_Class import Tile
 from Board_Class import Gameboard
-from pygame.locals import *
+from Tile_Mouse import mouse_press
+
+
 
 # ----------------------------------------------------------------------------------------------------
 
@@ -47,6 +48,7 @@ def main():# define where data directory is located
 
     # keep track of time
     clock = pygame.time.Clock()
+    mouselatch = False
     # game loop
     while 1:
         # get input
@@ -54,6 +56,17 @@ def main():# define where data directory is located
             if event.type == pygame.QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE) \
                     or (event.type == KEYDOWN and event.key == K_q):
                 sys.exit()
+
+
+            mouse_press(event):
+            '''# mouse button handling
+            if event.type == pygame.MOUSEBUTTONDOWN or mouselatch:
+                print("Mouse Location", pygame.mouse.get_pos())
+                mouselatch = True
+
+            if event.type == pygame.MOUSEBUTTONUP:
+                mouselatch = False
+            '''
 
         # clear sprites
         backscreen.fill(config.black)
@@ -68,7 +81,7 @@ def main():# define where data directory is located
         pygame.display.flip()
 
         # timer set for 30 frames
-        clock.tick(30)
+        #clock.tick(30)
 
 
 # This is the main_init
