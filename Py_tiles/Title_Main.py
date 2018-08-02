@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 # This is a tile puzzle game
 # The idea is to have rows & colnums shift as a move
 # When there is a 3-row, 4-row, 5-row, and 4 square then remove them from play
@@ -10,7 +11,7 @@ import sys
 import Tile_Config as config
 from Gtiles_Class import Tile
 from Board_Class import Gameboard
-from Tile_Mouse import mouse_press
+from Tile_Mouse import Gamemouse
 
 
 
@@ -39,6 +40,7 @@ def main():# define where data directory is located
     Tile.containers = tiles, all
 
     tileboard = Gameboard()
+    mouse = Gamemouse()
 
     buffervar = config.boardbuffer
     for i in range(buffervar, config.boardsize[1] + buffervar):
@@ -48,7 +50,6 @@ def main():# define where data directory is located
 
     # keep track of time
     clock = pygame.time.Clock()
-    mouselatch = False
     # game loop
     while 1:
         # get input
@@ -57,16 +58,10 @@ def main():# define where data directory is located
                     or (event.type == KEYDOWN and event.key == K_q):
                 sys.exit()
 
+            mousepos = mouse.mouse_press(event)
+            print("pos", mousepos)
+            print(mouse.mouse_direction(mousepos))
 
-            mouse_press(event):
-            '''# mouse button handling
-            if event.type == pygame.MOUSEBUTTONDOWN or mouselatch:
-                print("Mouse Location", pygame.mouse.get_pos())
-                mouselatch = True
-
-            if event.type == pygame.MOUSEBUTTONUP:
-                mouselatch = False
-            '''
 
         # clear sprites
         backscreen.fill(config.black)

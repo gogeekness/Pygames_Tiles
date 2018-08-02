@@ -9,7 +9,6 @@ import Tile_Config as config
 # The other get there info from this gameboard
 
 class Gameboard:
-
     # create a 2d array with the inital information for the gameboard
     # Sets status for the board as "init"
     def __init__(self):
