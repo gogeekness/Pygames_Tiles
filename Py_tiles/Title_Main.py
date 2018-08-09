@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-
+'''
 # This is a tile puzzle game
 # The idea is to have rows & colnums shift as a move
 # When there is a 3-row, 4-row, 5-row, and 4 square then remove them from play
 # Play ends if there are no 3,4,5 rows or 4 squares
+'''
 
 import pygame
 from pygame.locals import *
@@ -12,8 +13,6 @@ import Tile_Config as config
 from Gtiles_Class import Tile
 from Board_Class import Gameboard
 from Tile_Mouse import Gamemouse
-
-
 
 # ----------------------------------------------------------------------------------------------------
 
@@ -25,7 +24,8 @@ from Tile_Mouse import Gamemouse
 
 
 
-def main():# define where data directory is located
+def main():
+# define where data directory is located
     pygame.init()
     tileset = []
 
@@ -59,9 +59,8 @@ def main():# define where data directory is located
                 sys.exit()
 
             mousepos = mouse.mouse_press(event)
-            print("pos", mousepos)
-            print(mouse.mouse_direction(mousepos))
-
+            mousedir = (mouse.mouse_direction(mousepos))
+            print("Position ", mousepos, " Directoin ", mousedir)
 
         # clear sprites
         backscreen.fill(config.black)

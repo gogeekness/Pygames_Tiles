@@ -1,12 +1,16 @@
+'''
 # GameBoard class
-
-import os, pygame, random, math
-import Tile_Config as config
-
 
 # The main class that the other classes will work from.
 # From this the graphics will pull status information and color type.
 # The other get there info from this gameboard
+'''
+
+
+import os, pygame, random, math
+import Tile_Config as config
+import operator
+
 
 class Gameboard:
     # create a 2d array with the inital information for the gameboard
@@ -42,11 +46,11 @@ class Gameboard:
         return False if checklist.count(tile_color) < len(pos_list) else True
 
 
-    # to set the gameboard so there are no winning tile groups on the gameboard at the start
+
     def find_start(self, status, x, y):
+        ''' to set the gameboard so there are no winning tile groups on the gameboard at the start
         # checksum the 3 right-horizontal, and 3-vertical, and 4-square
-        # Then see if the tile needs to be changed
-        checksumh, checksumv, checksums = 0, 0, 0
+        # Then see if the tile needs to be changed '''
         three = True
         # while the modula is == 0 then repeat
         while three:
@@ -57,8 +61,7 @@ class Gameboard:
             checksums = self.checkequal(config.pattern4s[2], tilecolor, x, y)
             checksumv = self.checkequal(config.pattern3l[3], tilecolor, x, y)
             if not checksumh and not checksumv and not checksums:
-                # If the sum don't match then break out of the loop and
-                #print(">== New Tile Cords: ", x, y, "Value: ", self.array[x][y]['color'])
+                # If the sums don't match then break out of the loop
                 three = False
 
 
