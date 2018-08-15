@@ -4,9 +4,6 @@
     <list default="true" id="bbb7d034-c1ba-4935-b1d7-c0ea76423d78" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Py_tiles/Board_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_tiles/Board_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_tiles/Tile_Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_tiles/Tile_Config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_tiles/Tile_Mouse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_tiles/Tile_Mouse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_tiles/Title_Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_tiles/Title_Main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Title_Main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Title_Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Py_tiles/Title_Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
               <folding>
                 <element signature="e#245#258#0" expanded="true" />
               </folding>
@@ -32,16 +29,17 @@
       <file leaf-file-name="Tile_Config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Py_tiles/Tile_Config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="420">
+              <caret line="30" column="6" selection-start-line="29" selection-end-line="30" selection-end-column="173" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board_Class.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Board_Class.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Py_tiles/Board_Class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="427">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#202#233#0" expanded="true" />
               </folding>
@@ -64,8 +62,8 @@
       <file leaf-file-name="Tile_Mouse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Py_tiles/Tile_Mouse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="168">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#227#240#0" expanded="true" />
               </folding>
@@ -111,10 +109,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1321" />
-    <option name="y" value="28" />
-    <option name="width" value="2367" />
-    <option name="height" value="1689" />
+    <option name="x" value="819" />
+    <option name="y" value="360" />
+    <option name="width" value="2580" />
+    <option name="height" value="1392" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -122,6 +120,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Tiles" type="cbb8eebc:String" user="Tiles" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Tiles" type="cbb8eebc:String" user="Tiles" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,22 +151,6 @@
             <path>
               <item name="Pygames_Tiles" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Tiles" type="cbb8eebc:String" user="Tiles" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Tiles" type="cbb8eebc:String" user="Tiles" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
             </path>
           </expand>
           <select />
@@ -305,19 +303,26 @@
       <option name="project" value="LOCAL" />
       <updated>1533233370062</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added new class to handle the mouse allowing to drag and position on the mouse on the game board.">
+      <created>1533825498525</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1533825498525</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="881" y="19" width="1578" height="1126" extended-state="0" />
+    <frame x="547" y="240" width="1719" height="927" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22634271" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20762463" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5089514" side_tool="true" visible="true" weight="0.25172755" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5096774" side_tool="true" visible="true" weight="0.31326783" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4910486" visible="true" weight="0.25172755" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4903226" visible="true" weight="0.31326783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -645,16 +650,6 @@
     <entry file="file://$USER_HOME$/Py_Game/ball_bounce.py" />
     <entry file="file://$USER_HOME$/Py_Game/Mult_ball.py" />
     <entry file="file://$PROJECT_DIR$/Py_tiles/Tile_classes.py" />
-    <entry file="file://$PROJECT_DIR$/Py_tiles/Gtiles_Class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding>
-            <element signature="e#190#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -671,36 +666,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_tiles/Tile_Mouse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="168">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#227#240#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Py_tiles/Title_Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="e#245#258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Py_tiles/Gtiles_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="e#190#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Py_tiles/Tile_Config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="420">
+          <caret line="30" column="6" selection-start-line="29" selection-end-line="30" selection-end-column="173" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Py_tiles/Board_Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="427">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#202#233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Py_tiles/Title_Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#245#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
