@@ -63,11 +63,3 @@ class Gameboard:
             if not checksumh and not checksumv and not checksums:
                 # If the sums don't match then break out of the loop
                 three = False
-
-
-
-
-
-
-
-
