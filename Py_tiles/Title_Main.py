@@ -34,13 +34,18 @@ def main():
     backscreen.fill(config.black)
     backscreen.blit(backscreen, (0, 0))
 
-    # load_image("ball.png")
-    tiles = pygame.sprite.Group()
-    all = pygame.sprite.RenderUpdates()
-    Tile.containers = tiles, all
 
     tileboard = Gameboard()
     mouse = Gamemouse()
+
+    # load_images
+    tiles = pygame.sprite.Group()
+    mousesprite = pygame.sprite.Group(mouse)
+    all = pygame.sprite.RenderUpdates()
+    Tile.containers = tiles, all
+
+
+
 
     buffervar = config.boardbuffer
     for i in range(buffervar, config.boardsize[1] + buffervar):
@@ -69,6 +74,7 @@ def main():
         all.update()
 
         # update display
+        mousesprite.update()
         dirty = all.draw(backscreen)
         pygame.display.update(dirty)
 

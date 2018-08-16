@@ -10,17 +10,12 @@ import Tile_Config as config
 # import Board_Class as board
 
 
-# define where data directory is located
-main_dir = os.path.split(os.path.abspath(__file__))[0]
-data_dir = os.path.join(main_dir, "data_dir")
-
-
 def load_image(subfile, tcolor):
     try:
         # this code loads the specific color for the tile.
-        image = pygame.image.load(os.path.join(data_dir, (subfile + tcolor)))
+        image = pygame.image.load(os.path.join(config.data_dir, (subfile + tcolor)))
     except pygame.error:
-        raise SystemExit('Could not load tile image.', os.path.join(data_dir, (subfile + tcolor)))
+        raise SystemExit('Could not load tile image.', os.path.join(config.data_dir, (subfile + tcolor)))
     return image
 
 

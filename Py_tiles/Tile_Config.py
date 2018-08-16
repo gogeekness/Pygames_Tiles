@@ -1,8 +1,11 @@
 '''
 # Tile Config, Globals
 
-'''
+This file contains the main settings for the program.
+All of the colors, tile states, test array offset lists, and main file directories
 
+'''
+import os
 
 displaysize = width, height = 1200, 800  # set size of the field
 
@@ -15,6 +18,10 @@ lgrey = (180, 180, 180)
 red   = (255,   0,   0)
 green = (  0,  255,  0)
 blue  = (  0,    0,255)
+
+# define where data directory is located
+main_dir = os.path.split(os.path.abspath(__file__))[0]
+data_dir = os.path.join(main_dir, "data_dir")
 
 tilecolor = ['blank', 'red', 'green', 'blue', 'yellow', 'cyan', 'purple', 'brown', 'grey']
 tilestatus = ['init', 'in-play', 'moving', 'new', 'remove']
