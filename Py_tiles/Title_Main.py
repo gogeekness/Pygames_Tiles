@@ -27,6 +27,8 @@ from Tile_Mouse import Gamemouse
 def main():
 # define where data directory is located
     pygame.init()
+
+    tileboard = Gameboard()  # non-graphical init
     tileset = []
 
     # make a background
@@ -34,28 +36,32 @@ def main():
     backscreen.fill(config.black)
     backscreen.blit(backscreen, (0, 0))
 
-
-    tileboard = Gameboard()
-    mouse = Gamemouse()
-
-    # load_images
+    # Init sprite groups
     tiles = pygame.sprite.Group()
-    mousesprite = pygame.sprite.Group(mouse)
+    cursor = pygame.sprite.GroupSingle()
     all = pygame.sprite.RenderUpdates()
+
+
+    # Initialize Groups
     Tile.containers = tiles, all
+    Gamemouse.containers = cursor, all
+    cursor = Gamemouse()
 
-
-
-
+    # Set up inital gameboard
+    # Only make sprites for the visable tiles.
     buffervar = config.boardbuffer
     for i in range(buffervar, config.boardsize[1] + buffervar):
         for j in range(buffervar, config.boardsize[0] + buffervar):
-            # print("Cords:", i, j, " color: -> ", tileboard[(i, j)]['color'])
-            tileset.append(Tile((50 + ((j - buffervar) * 100), 50 + ((i - buffervar) * 100)), tileboard[(i, j)]['color']))
+            Tile((50 + ((j - buffervar) * 100), 50 + ((i - buffervar) * 100)), tileboard[(i, j)]['color'])
 
     # keep track of time
     clock = pygame.time.Clock()
-    # game loop
+
+    '''
+    # 
+    # MAIN GAME LOOP
+    #
+    '''
     while 1:
         # get input
         for event in pygame.event.get():
@@ -63,9 +69,12 @@ def main():
                     or (event.type == KEYDOWN and event.key == K_q):
                 sys.exit()
 
-            mousepos = mouse.mouse_press(event)
-            mousedir = (mouse.mouse_direction(mousepos))
-            print("Position ", mousepos, " Directoin ", mousedir)
+
+            mousepos = cursor.mouse_press(event)
+            mousedir = (cursor.mouse_direction(mousepos))
+            collide_list = cursor.mouse_collide(tiles)
+
+            print("Position ", mousepos, " Directoin ", mousedir, " Sprite Pressed list:", collide_list)
 
         # clear sprites
         backscreen.fill(config.black)
@@ -74,15 +83,16 @@ def main():
         all.update()
 
         # update display
-        mousesprite.update()
         dirty = all.draw(backscreen)
         pygame.display.update(dirty)
+
+
 
         pygame.display.flip()
 
         # timer set for 30 frames
-        #clock.tick(30)
-
+        clock.tick(30)
+        cursor.select = False
 
 # This is the main_init
 if __name__ == '__main__':

@@ -22,17 +22,16 @@ def load_image(subfile, tcolor):
 # constructor for class Tile
 class Tile(pygame.sprite.Sprite):
     image = None
-
     # Construct the tiles
     def __init__(self, pos, tcolor):
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.image = load_image('Tiles_01_', (tcolor + '.png'))
         self.rect = self.image.get_rect()
+        self.pos = pos
         self.rect.x = pos[0]
         self.rect.y = pos[1]
         self.speedx = config.speed
         self.speedy = config.speed
-
 
     def update(self):
         self.rect.move_ip(self.speedx, self.speedy)
