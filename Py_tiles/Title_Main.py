@@ -39,12 +39,13 @@ def main():
     # Init sprite groups
     tiles = pygame.sprite.Group()
     cursor = pygame.sprite.GroupSingle()
+
     all = pygame.sprite.RenderUpdates()
 
 
     # Initialize Groups
     Tile.containers = tiles, all
-    Gamemouse.containers = cursor, all
+    Gamemouse.containers = all, cursor
     cursor = Gamemouse()
 
     # Set up inital gameboard
